@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="NexaMart - marketplace modern untuk jual beli barang dengan pengalaman belanja yang cepat, aman, dan nyaman." />
+  <title>NexaMart — Marketplace Modern</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="NexaMart">
+        <span class="brand-mark">N</span>
+        <span>NexaMart</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#home">Beranda</a>
+        <a href="#products">Produk</a>
+        <a href="#categories">Kategori</a>
+        <a href="#sell">Jual Barang</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">♡ <span id="wishlistCount">0</span></button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Keranjang">🛒 <span id="cartCount">0</span></button>
+        <a class="btn btn-primary desktop-only" href="#sell">Mulai Jual</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">MARKETPLACE GENERASI BARU</div>
+          <h1>Jual lebih mudah.<br><span>Belanja lebih yakin.</span></h1>
+          <p>
+            Temukan barang pilihan dari seller terpercaya, bandingkan harga,
+            dan nikmati pengalaman belanja yang cepat dalam satu platform.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary btn-large">Jelajahi Produk</a>
+            <a href="#sell" class="btn btn-ghost btn-large">Buka Toko Gratis</a>
+          </div>
+
+          <div class="stats">
+            <div><strong>12K+</strong><span>Produk</span></div>
+            <div><strong>4.8/5</strong><span>Rating pengguna</span></div>
+            <div><strong>1.5K+</strong><span>Seller aktif</span></div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="floating-chip chip-a">✓ Seller Terverifikasi</div>
+          <div class="floating-chip chip-b">⚡ Checkout Cepat</div>
+
+          <div class="hero-card">
+            <div class="hero-card-image">
+              <img src="https://images.unsplash.com/photo-1601524909162-ae8725290836?auto=format&fit=crop&w=900&q=85" alt="Produk elektronik modern">
+              <div class="deal-badge">FLASH DEAL</div>
+            </div>
+            <div class="hero-card-body">
+              <div>
+                <small>PILIHAN HARI INI</small>
+                <h3>Wireless Headphones Pro</h3>
+                <div class="rating">★ 4.9 <span>• 384 terjual</span></div>
+              </div>
+              <div class="price">Rp899.000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div>🔒 <span><strong>Transaksi Aman</strong><small>Perlindungan pembayaran</small></span></div>
+        <div>🚚 <span><strong>Pengiriman Cepat</strong><small>Partner logistik terpercaya</small></span></div>
+        <div>↩ <span><strong>Mudah Retur</strong><small>Proses sederhana</small></span></div>
+        <div>💬 <span><strong>Support Responsif</strong><small>Siap membantu pengguna</small></span></div>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">EKSPLORASI</span>
+            <h2>Belanja berdasarkan kategori</h2>
+          </div>
+          <a href="#products" class="text-link">Lihat semua produk →</a>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card active" data-category="Semua"><span>✨</span><b>Semua</b><small>Pilihan terbaik</small></button>
+          <button class="category-card" data-category="Elektronik"><span>💻</span><b>Elektronik</b><small>Gadget & aksesori</small></button>
+          <button class="category-card" data-category="Fashion"><span>👕</span><b>Fashion</b><small>Gaya terbaru</small></button>
+          <button class="category-card" data-category="Rumah"><span>🛋️</span><b>Rumah</b><small>Living essentials</small></button>
+          <button class="category-card" data-category="Hobi"><span>🎮</span><b>Hobi</b><small>Gaming & koleksi</small></button>
+          <button class="category-card" data-category="Olahraga"><span>🏃</span><b>Olahraga</b><small>Aktif setiap hari</small></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading product-head">
+          <div>
+            <span class="section-kicker">REKOMENDASI</span>
+            <h2>Produk yang sedang diminati</h2>
+          </div>
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Cari produk..." autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="filter-row" id="filterRow">
+          <button class="filter-btn active" data-category="Semua">Semua</button>
+          <button class="filter-btn" data-category="Elektronik">Elektronik</button>
+          <button class="filter-btn" data-category="Fashion">Fashion</button>
+          <button class="filter-btn" data-category="Rumah">Rumah</button>
+          <button class="filter-btn" data-category="Hobi">Hobi</button>
+          <button class="filter-btn" data-category="Olahraga">Olahraga</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="empty-state hidden" id="emptyState">
+          <div>🔎</div>
+          <h3>Produk tidak ditemukan</h3>
+          <p>Coba kata kunci atau kategori lain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seller-section" id="sell">
+      <div class="container seller-card">
+        <div class="seller-copy">
+          <span class="section-kicker light">UNTUK PENJUAL</span>
+          <h2>Ubah barang jadi peluang.</h2>
+          <p>
+            Mulai toko Anda, tampilkan produk secara profesional, dan jangkau lebih banyak calon pembeli.
+            Dashboard seller dapat dikembangkan dengan fitur stok, pesanan, chat, dan analitik penjualan.
+          </p>
+          <div class="seller-points">
+            <span>✓ Pendaftaran mudah</span>
+            <span>✓ Manajemen produk</span>
+            <span>✓ Insight penjualan</span>
+          </div>
+          <button class="btn btn-light" id="sellerDemoBtn">Lihat Demo Seller</button>
+        </div>
+        <div class="seller-dashboard">
+          <div class="dash-top"><span>Dashboard Seller</span><span class="online-dot">● Online</span></div>
+          <div class="dash-metrics">
+            <div><small>Penjualan</small><strong>Rp12,8 jt</strong><em>+18.4%</em></div>
+            <div><small>Pesanan</small><strong>128</strong><em>+12.1%</em></div>
+          </div>
+          <div class="chart">
+            <div style="height:32%"></div>
+            <div style="height:48%"></div>
+            <div style="height:42%"></div>
+            <div style="height:61%"></div>
+            <div style="height:54%"></div>
+            <div style="height:76%"></div>
+            <div style="height:88%"></div>
+          </div>
+          <div class="dash-orders">
+            <div><span>Smartwatch Active 2</span><b>Rp1.299.000</b></div>
+            <div><span>Urban Sneakers</span><b>Rp749.000</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">KEPERCAYAAN</span>
+            <h2>Pengalaman yang membuat pengguna kembali</h2>
+          </div>
+        </div>
+        <div class="testimonial-grid">
+          <article>
+            <div class="stars">★★★★★</div>
+            <p>“Tampilannya clean, pencarian produk cepat, dan proses memilih barang terasa simpel.”</p>
+            <div class="person"><span>AR</span><div><b>Alya Rahma</b><small>Pembeli</small></div></div>
+          </article>
+          <article>
+            <div class="stars">★★★★★</div>
+            <p>“Konsep dashboard seller-nya menarik. Data penting terlihat jelas tanpa terasa rumit.”</p>
+            <div class="person"><span>DP</span><div><b>Dimas Pratama</b><small>Seller</small></div></div>
+          </article>
+          <article>
+            <div class="stars">★★★★★</div>
+            <p>“Desainnya sudah terasa seperti platform komersial, bukan sekadar halaman katalog.”</p>
+            <div class="person"><span>NS</span><div><b>Nadia S.</b><small>Pengguna</small></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box">
+        <div>
+          <span class="section-kicker light">SIAP MULAI?</span>
+          <h2>Temukan barang favoritmu hari ini.</h2>
+          <p>Satu tempat untuk membeli, menjual, dan menemukan peluang baru.</p>
+        </div>
+        <a href="#products" class="btn btn-light btn-large">Mulai Belanja</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#home"><span class="brand-mark">N</span><span>NexaMart</span></a>
+        <p>Marketplace modern untuk pengalaman jual beli yang lebih mudah, cepat, dan terpercaya.</p>
+      </div>
+      <div><b>Marketplace</b><a href="#products">Produk</a><a href="#categories">Kategori</a><a href="#sell">Jual Barang</a></div>
+      <div><b>Perusahaan</b><a href="#">Tentang</a><a href="#">Karier</a><a href="#">Blog</a></div>
+      <div><b>Bantuan</b><a href="#">Pusat Bantuan</a><a href="#">Keamanan</a><a href="#">Kontak</a></div>
+    </div>
+    <div class="container copyright">© 2026 NexaMart. Demo prototype untuk presentasi client.</div>
+  </footer>
+
+  <div class="drawer-backdrop hidden" id="drawerBackdrop"></div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Keranjang">
+    <div class="drawer-head">
+      <h3>Keranjang Belanja</h3>
+      <button class="close-btn" data-close="cartDrawer">×</button>
+    </div>
+    <div class="drawer-content" id="cartItems"></div>
+    <div class="drawer-footer">
+      <div class="total"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+      <button class="btn btn-primary full" id="checkoutBtn">Lanjut Checkout</button>
+      <small>* Demo front-end. Integrasi payment gateway membutuhkan backend.</small>
+    </div>
+  </aside>
+
+  <aside class="drawer" id="wishlistDrawer" aria-label="Wishlist">
+    <div class="drawer-head">
+      <h3>Wishlist</h3>
+      <button class="close-btn" data-close="wishlistDrawer">×</button>
+    </div>
+    <div class="drawer-content" id="wishlistItems"></div>
+  </aside>
+
+  <div class="toast" id="toast">Produk ditambahkan</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
